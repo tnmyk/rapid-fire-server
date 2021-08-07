@@ -1,7 +1,8 @@
 const app = require("express")();
 const PORT = process.env.PORT || 8000;
 const db = require("./firebase");
-
+const cors = require('cors')
+app.use(cors())
 app.listen(PORT);
 
 app.get("/", async (req, res) => {
